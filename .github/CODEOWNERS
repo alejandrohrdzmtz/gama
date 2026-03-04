@@ -1,0 +1,34 @@
+# CODEOWNERS
+# https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+#
+# Each line defines who is automatically requested for review
+# when a pull request modifies files matching that pattern.
+#
+# Format: <pattern> <@user or @org/team>
+#
+# The last matching rule takes precedence.
+
+# Global owner — reviews all PRs by default
+*                               @alejandrohrdzmtz
+
+# Core gateway
+/internal/gateway/              @alejandrohrdzmtz
+/internal/server/               @alejandrohrdzmtz
+
+# Plugin system — changes here affect all plugin authors
+/plugin/                        @alejandrohrdzmtz
+
+# OPA middleware — policy changes require extra attention
+/internal/opa/                  @alejandrohrdzmtz
+
+# Observability
+/internal/telemetry/            @alejandrohrdzmtz
+
+# CI/CD and repo configuration — always reviewed by maintainer
+/.github/                       @alejandrohrdzmtz
+/Makefile                       @alejandrohrdzmtz
+
+# Documentation — lower friction, still tracked
+/docs/                          @alejandrohrdzmtz
+README.md                       @alejandrohrdzmtz
+CONTRIBUTING.md                 @alejandrohrdzmtz
